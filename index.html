@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Trivia Game 2</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+</head>
+
+
+<body>
+
+
+    <div class="container col">
+
+        <div class="timerSection d-none d-lg-block">
+            <h5 class="text-white mt-5 timerText">Time Remaining: </h5>
+            <div class="timer"></div>
+        </div>
+
+        <h1 class="py-3">Timed Trivia Game</h1>
+
+        <div class="quizSection col">
+            <div class="jumbotron pb-3">
+                <h2 class="text-light">It's Quiz Time</h2>
+                <p class="text-light mb-5">Test your knowledge of the Wasatch Mountains</p>
+                <button type="button" class="btn btn-info my-3" id="startButton">Start</button>
+                <div class="timerSectionSmall d-lg-none">
+                    <h5 class="text-white timerText">Time Remaining: </h5>
+                    <div class="timer"></div>
+                    <div class="btn-warning" id="tryAgain">Press to Try Again</div>
+                </div>
+                <div id="results"></div>
+            </div>
+
+            <!--  QUESTION 1  -->
+            <div class="q1">
+                <div class="row" id="questionSection-1">
+                    <div class="col-md-6">
+                        <div id="imageDiv">
+                            <img src="assets/images/q1_lone.jpg" alt="Lone Peak">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <h4 class="question">This Peak sits high above the Salt Lake and Utah Valleys.</h4>
+
+                        <button class="btn-secondary text-center m-1 q1Button" value="Mt Timpanogos">Mt Timpanogos</button>
+                        <button class="btn-secondary text-center m-1 q1Button" value="Lone Peak">Lone Peak</button>
+                        <button class="btn-secondary text-center m-1 q1Button" value="Bells Peak">Bells Peak</button>
+                        <button class="btn-secondary text-center m-1 q1Button" value="Thunder Mountain">Thunder Mountain</button>
+
+                        <h3 id="q1_Response"></h3>
+
+                    </div>
+                </div>
+                <hr class="hr">
+            </div>
+
+            <!--  QUESTION 2 -->
+            <div class="q2">
+                <div class="row" id="questionSection-2">
+                    <div class="col-md-6">
+                        <div id="imageDiv">
+                            <img src="assets/images/q2_broads.jpg" alt="Broads Fork">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <h4 class="question">This basin is the first major side canyon up Big Cottonwood Canyon.</h4>
+
+                        <button class="btn-secondary text-center m-1 q2Button" value="Broads Fork">Broads Fork</button>
+                        <button class="btn-secondary text-center m-1 q2Button" value="Mineral Fork">Mineral Fork</button>
+                        <button class="btn-secondary text-center m-1 q2Button" value="Butler Fork">Butler Fork</button>
+                        <button class="btn-secondary text-center m-1 q2Button" value="Cardiff Fork">Cardiff Fork</button>
+
+                        <h3 id="q2_Response"></h3>
+
+                    </div>
+                </div>
+                <hr class="hr">
+
+                <!-- Timer -->
+                <div class="row">
+                    <div class="timerSectionSmall_2 d-lg-none">
+                        <h5 class="timerText">Time Remaining: </h5>
+                        <div class="timer"></div>
+                    </div>
+                </div>
+            </div>
+            <hr class="hr">                
+
+            <!-- QUESTION 3 -->
+            <div class="q1">
+                <div class="row" id="questionSection-3">
+                    <div class="col-md-6">
+                        <div id="imageDiv">
+                            <img src="assets/images/q3_AF_Twin.jpg" alt="American Fork Twin Peaks">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <h4 class="question">This Peak at Snowbird is Salt Lake County's Highest.</h4>
+
+                        <button class="btn-secondary text-center m-1 q3Button" value="Mt Baldy">Mt Baldy</button>
+                        <button class="btn-secondary text-center m-1 q3Button" value="Flagstaff Peak">Flagstaff Peak</button>
+                        <button class="btn-secondary text-center m-1 q3Button" value="Mt Superior">Mt Superior</button>
+                        <button class="btn-secondary text-center m-1 q3Button" value="A.F. Twin Peaks">A.F. Twin Peaks</button>
+
+                        <h3 id="q3_Response"></h3>
+
+                    </div>
+                </div>
+                <hr class="hr">
+            </div>
+
+            <!--  QUESTION 4 -->
+            <div class="q2">
+                <div class="row" id="questionSection-4">
+                    <div class="col-md-6">
+                        <div id="imageDiv">
+                            <img src="assets/images/q4_maybird.jpg" alt="Maybird Gulch">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <h4 class="question">This basin sits below the Pfiefferhorn in Little Cottonwood Canyon.</h4>
+
+                        <button class="btn-secondary text-center m-1 q4Button" value="Red Pine Fork">Red Pine Fork</button>
+                        <button class="btn-secondary text-center m-1 q4Button" value="Maybird Gulch">Maybird Gulch</button>
+                        <button class="btn-secondary text-center m-1 q4Button" value="Grizzley Gulch">Grizzley Gulch</button>
+                        <button class="btn-secondary text-center m-1 q4Button" value="White Pine Fork">White Pine Fork</button>
+
+                        <h3 id="q4_Response"></h3>
+
+                    </div>
+                </div>
+                <hr class="hr">
+
+                <!-- Timer -->
+                <div class="row">
+                    <div class="timerSectionSmall_2 d-lg-none">
+                        <h5 class="timerText">Time Remaining: </h5>
+                        <div class="timer"></div>
+                    </div>
+                </div>
+            </div>
+            <hr class="hr">                
+
+
+            <!-- <button class="btn-primary hr" id="doneButton">Done</button> -->
+        </div>
+
+
+    </div>
+
+
+</body>
+
+<script src="https://code.jquery.com/jquery.js"></script>
+
+<script type="text/javascript" src="assets/javascript/app.js"></script>
+
+</html>
