@@ -1,0 +1,50 @@
+body,
+.jumbotron {
+    background-image: url("../images/dark_wood.png");
+}
+
+h1 {
+    color: #ffffff;
+    text-align: center;
+}
+
+.quizSection {
+    background-image: url("../images/whitediamond.png");
+    display: block;
+    margin: 0 auto;
+    width: 700px;
+    height: 100%;
+    padding: 25px;
+}
+
+#imageDiv {
+    width: 300px;
+}
+
+.timer {
+    color: #ffffff;
+    /* margin-top: 10px; */
+}
+.timerSectionSmall {
+    padding: 10px;
+    /* background: rgb(192, 192, 192, 0.8); */
+    width: 200px;
+}
+
+.timerSectionSmall_2 {
+    color: black;
+    padding: 10px;
+    background: rgb(192, 192, 192);
+    width: 200px;
+}
+.timerSection {
+    position: fixed;
+}
+
+#results {
+    color: rgb(255, 198, 92);
+}
+
+#tryAgain {
+    width: 200px;
+}
