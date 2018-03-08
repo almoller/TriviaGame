@@ -45,6 +45,6 @@ h1 {
     color: rgb(255, 198, 92);
 }
 
-.jumbotron hr {
-    color: rgb(255, 198, 92);
+#tryAgain {
+    width: 200px;
 }
