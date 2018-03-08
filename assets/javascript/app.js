@@ -33,7 +33,7 @@ function start() {
 
 function checkAnswers() {
     for (i = 0; i < answerKey.length; i++) {
-        if(answers[i] === answerKey[i]) {
+        if (answers[i] === answerKey[i]) {
             correctAnswers++
         } else {
             incorrectAnswers++
@@ -69,13 +69,13 @@ function questionFunctional() {
         answer1 = this.value; console.log("you chose " + answer1);
     });
     // QUESTION 2
-    $(".q2Button").on("click", function () {
+    $(".q2Button").on("click", function () { 
         $(".q2Button").removeClass("btn-success");
         $(this).addClass("btn-success");
         answer2 = this.value; console.log("you chose " + answer2);
     });
-     //  QUESTION 3
-     $(".q3Button").on("click", function () {
+    //  QUESTION 3
+    $(".q3Button").on("click", function () {
         $(".q3Button").removeClass("btn-success");
         $(this).addClass("btn-success");
         answer3 = this.value; console.log("you chose " + answer3);
@@ -104,7 +104,15 @@ function disableButtons() {
     $(".q2Button").off("click");
     $(".q3Button").off("click");
     $(".q4Button").off("click");
-    
+
+}
+
+function clearSelectedButtons() {
+    $(".q1Button").removeClass("btn-success");
+    $(".q2Button").removeClass("btn-success");
+    $(".q3Button").removeClass("btn-success");
+    $(".q4Button").removeClass("btn-success");
+
 }
 
 function results() {
@@ -113,8 +121,8 @@ function results() {
     $("#results").append("<h3>Incorrect Responses: " + incorrectAnswers + "</h3>");
     initialState();
     $("#tryAgain").show();
-    $("#tryAgain").on("click", function() {
-       tryAgain();
+    $("#tryAgain").on("click", function () {
+        tryAgain();
     })
 }
 
@@ -127,9 +135,11 @@ function initialState() {
 
 function tryAgain() {
     initialState();
+    clearSelectedButtons();
     timerNumber = 30;
     correctAnswers = 0;
     incorrectAnswers = 0;
+    answers = [];
     $("#results").html("");
     $("#results").hide();
     $(".timer").css("color", "white");
